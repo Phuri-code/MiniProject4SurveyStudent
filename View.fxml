@@ -4,7 +4,9 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -44,19 +46,23 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <CheckBox layoutX="190.0" layoutY="265.0" mnemonicParsing="false" text="GTR" />
-      <CheckBox layoutX="190.0" layoutY="296.0" mnemonicParsing="false" text="GIC" />
-      <CheckBox layoutX="189.0" layoutY="322.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="62.0" text="AMS" />
       <Label layoutX="128.0" layoutY="358.0" text="Your Favorite Course: " textFill="#2d95ba">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <CheckBox layoutX="189.0" layoutY="386.0" mnemonicParsing="false" text="GTR" />
-      <CheckBox layoutX="189.0" layoutY="417.0" mnemonicParsing="false" text="GIC" />
-      <CheckBox layoutX="188.0" layoutY="443.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="62.0" text="AMS" />
-      <Button layoutX="205.0" layoutY="482.0" mnemonicParsing="false" text="SUBMIT" />
-      <TextField layoutX="171.0" layoutY="164.0" prefHeight="26.0" prefWidth="175.0" />
-      <DatePicker layoutX="172.0" layoutY="200.0" />
+      <CheckBox fx:id="check_MATH" layoutX="189.0" layoutY="386.0" mnemonicParsing="false" text="Math" />
+      <CheckBox fx:id="check_OS" layoutX="189.0" layoutY="417.0" mnemonicParsing="false" text="OS" />
+      <CheckBox fx:id="check_OS" layoutX="188.0" layoutY="443.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="62.0" text="OOP" />
+      <Button fx:id="submit_button" layoutX="205.0" layoutY="482.0" mnemonicParsing="false" onAction="#on_submit" text="SUBMIT" />
+      <TextField fx:id="StudentName" layoutX="171.0" layoutY="164.0" prefHeight="26.0" prefWidth="175.0" />
+      <DatePicker fx:id="DateOfBirth" layoutX="172.0" layoutY="200.0" />
+      <RadioButton fx:id="checkbox_GTR" layoutX="192.0" layoutY="266.0" mnemonicParsing="false" text="GTR">
+         <toggleGroup>
+            <ToggleGroup fx:id="Department" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="checkbox_GTR" layoutX="190.0" layoutY="300.0" mnemonicParsing="false" text="GIC" toggleGroup="$Department" />
+      <RadioButton fx:id="checkbox_GTR" layoutX="190.0" layoutY="330.0" mnemonicParsing="false" text="AMS" toggleGroup="$Department" />
    </children>
 </AnchorPane>
