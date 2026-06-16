@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller">
    <children>
       <ImageView fitHeight="102.0" fitWidth="122.0" layoutX="23.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -62,7 +62,7 @@
             <ToggleGroup fx:id="Department" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="checkbox_GTR" layoutX="190.0" layoutY="300.0" mnemonicParsing="false" text="GIC" toggleGroup="$Department" />
-      <RadioButton fx:id="checkbox_GTR" layoutX="190.0" layoutY="330.0" mnemonicParsing="false" text="AMS" toggleGroup="$Department" />
+      <RadioButton fx:id="checkbox_GIC" layoutX="190.0" layoutY="300.0" mnemonicParsing="false" text="GIC" toggleGroup="$Department" />
+      <RadioButton fx:id="checkbox_AMS" layoutX="190.0" layoutY="330.0" mnemonicParsing="false" text="AMS" toggleGroup="$Department" />
    </children>
 </AnchorPane>

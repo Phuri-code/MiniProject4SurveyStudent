@@ -1,5 +1,6 @@
 import java.net.URL;
 import java.util.ResourceBundle;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -33,7 +34,16 @@ public class controller {
     private CheckBox check_OS;
 
     @FXML
+    private CheckBox check_OOP;
+
+    @FXML
     private RadioButton checkbox_GTR;
+
+    @FXML
+    private RadioButton checkbox_GIC;
+
+    @FXML
+    private RadioButton checkbox_AMS;
 
     @FXML
     private Button submit_button;
@@ -41,18 +51,53 @@ public class controller {
     @FXML
     void on_submit(ActionEvent event) {
 
+        String name = StudentName.getText();
+
+        String dob = "Not Selected";
+        if (DateOfBirth.getValue() != null) {
+            dob = DateOfBirth.getValue().toString();
+        }
+
+        String department = "Not Selected";
+
+        if (checkbox_GTR.isSelected()) {
+            department = "GTR";
+        } else if (checkbox_GIC.isSelected()) {
+            department = "GIC";
+        } else if (checkbox_AMS.isSelected()) {
+            department = "AMS";
+        }
+
+        String courses = "";
+
+        if (check_MATH.isSelected()) {
+            courses += "Math ";
+        }
+
+        if (check_OS.isSelected()) {
+            courses += "OS ";
+        }
+
+        if (check_OOP.isSelected()) {
+            courses += "OOP ";
+        }
+
+        System.out.println("===== Survey Result =====");
+        System.out.println("Name: " + name);
+        System.out.println("DOB: " + dob);
+        System.out.println("Department: " + department);
+        System.out.println("Courses: " + courses);
+
+        StudentName.clear();
+        DateOfBirth.setValue(null);
+        check_MATH.setSelected(false);
+        check_OS.setSelected(false);
+        check_OOP.setSelected(false);
+        Department.selectToggle(null);
     }
 
     @FXML
     void initialize() {
-        assert DateOfBirth != null : "fx:id=\"DateOfBirth\" was not injected: check your FXML file 'View.fxml'.";
-        assert Department != null : "fx:id=\"Department\" was not injected: check your FXML file 'View.fxml'.";
-        assert StudentName != null : "fx:id=\"StudentName\" was not injected: check your FXML file 'View.fxml'.";
-        assert check_MATH != null : "fx:id=\"check_MATH\" was not injected: check your FXML file 'View.fxml'.";
-        assert check_OS != null : "fx:id=\"check_OS\" was not injected: check your FXML file 'View.fxml'.";
-        assert checkbox_GTR != null : "fx:id=\"checkbox_GTR\" was not injected: check your FXML file 'View.fxml'.";
-        assert submit_button != null : "fx:id=\"submit_button\" was not injected: check your FXML file 'View.fxml'.";
 
     }
-
 }

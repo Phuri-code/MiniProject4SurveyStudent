@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="532.0"
+            prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller">
+
+   <children>
+
+      <ImageView fitHeight="102.0" fitWidth="122.0"
+                 layoutX="23.0" layoutY="31.0"
+                 pickOnBounds="true"
+                 preserveRatio="true">
+         <image>
+            <Image url="@asset/itc_logo.jpg" />
+         </image>
+      </ImageView>
+
+      <ImageView fitHeight="102.0" fitWidth="122.0"
+                 layoutX="464.0" layoutY="21.0"
+                 pickOnBounds="true"
+                 preserveRatio="true">
+         <image>
+            <Image url="@asset/gtr_logo.jpg" />
+         </image>
+      </ImageView>
+
+      <Label layoutX="204.0" layoutY="51.0"
+             text="MINI Project 4"
+             textFill="#ff0606">
+         <font>
+            <Font name="System Bold" size="32.0"/>
+         </font>
+      </Label>
+
+      <Label layoutX="250.0" layoutY="98.0"
+             text="Survey Form">
+         <font>
+            <Font size="18.0"/>
+         </font>
+      </Label>
+
+      <Label layoutX="121.0" layoutY="168.0" text="Name :" />
+      <Label layoutX="123.0" layoutY="203.0" text="DoB :" />
+
+      <Label layoutX="121.0"
+             layoutY="236.0"
+             text="Your Department:"
+             textFill="#f40000">
+         <font>
+            <Font name="System Bold" size="14.0"/>
+         </font>
+      </Label>
+
+      <Label layoutX="128.0"
+             layoutY="358.0"
+             text="Your Favorite Course:"
+             textFill="#2d95ba">
+         <font>
+            <Font name="System Bold" size="14.0"/>
+         </font>
+      </Label>
+
+      <TextField fx:id="StudentName"
+                 layoutX="171.0"
+                 layoutY="164.0"
+                 prefWidth="175.0"/>
+
+      <DatePicker fx:id="DateOfBirth"
+                  layoutX="172.0"
+                  layoutY="200.0"/>
+
+      <RadioButton fx:id="checkbox_GTR"
+                   layoutX="192.0"
+                   layoutY="266.0"
+                   text="GTR">
+         <toggleGroup>
+            <ToggleGroup fx:id="Department"/>
+         </toggleGroup>
+      </RadioButton>
+
+      <RadioButton fx:id="checkbox_GIC"
+                   layoutX="192.0"
+                   layoutY="300.0"
+                   text="GIC"
+                   toggleGroup="$Department"/>
+
+      <RadioButton fx:id="checkbox_AMS"
+                   layoutX="192.0"
+                   layoutY="330.0"
+                   text="AMS"
+                   toggleGroup="$Department"/>
+
+      <CheckBox fx:id="check_MATH"
+                layoutX="189.0"
+                layoutY="386.0"
+                text="Math"/>
+
+      <CheckBox fx:id="check_OS"
+                layoutX="189.0"
+                layoutY="417.0"
+                text="OS"/>
+
+      <CheckBox fx:id="check_OOP"
+                layoutX="189.0"
+                layoutY="448.0"
+                text="OOP"/>
+
+      <Button fx:id="submit_button"
+              layoutX="205.0"
+              layoutY="482.0"
+              text="SUBMIT"
+              onAction="#on_submit"/>
+
+   </children>
+</AnchorPane>
